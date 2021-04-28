@@ -2,4 +2,12 @@ public class Taller2{
     public static void main(String[] args){
         
     }
+    public static void buscararchivo(){
+
+    }
+    //Este método se encargará de evaluar c/cadena para verificar si es políndroma o no
+    public static void EvaluadorCadena(){
+
+    }
+
 }
