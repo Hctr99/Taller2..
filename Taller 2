@@ -1,8 +1,28 @@
-public class Taller2{
+
+        import java.io.BufferedReader;
+        import java.io.FileReader;
+        import java.io.IOException;
+public class Taller2 {
     public static void main(String[] args){
-        
+        buscararchivo();
     }
+    //Puede que esté mal llamado el método, pero se encarga de buscar y "mostrar" el archivo (lo que no logré conseguir que hiciera)
     public static void buscararchivo(){
+        BufferedReader objReader = null;
+        try {
+            String strCurrentLine;
+            objReader = new BufferedReader(new FileReader("C: \\ Cadenas.txt"));
+            while ((strCurrentLine = objReader.readLine()) != null) {
+                System.out.println(strCurrentLine);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+            try {
+                if (objReader != null)     objReader.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
 
     }
     //Este método se encargará de evaluar c/cadena para verificar si es políndroma o no
